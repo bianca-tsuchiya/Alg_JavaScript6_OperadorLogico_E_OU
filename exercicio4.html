@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 4</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    Café da Manhã:
+    <select name="cafe_manha" id="cb_cafe_manha">
+        <option value="" data-default disabled selected></option>
+        <option value="ovos">Ovos</option>
+        <option value="arroz">Leite de Arroz</option>
+        <option value="bacon">Bacon</option>
+    </select>
+    <br><br>
+    Almoço: <select name="almoco" id="cb_almoco">
+        <option value="" data-default disabled selected></option>
+        <option value="bife">Bife</option>
+        <option value="hamb_soja">Hamburguer de Soja</option>
+        <option value="frango">Frango Grelhado</option>
+    </select>
+    <br><br>
+    Janta: <select name="janta" id="cb_janta">
+        <option value="" data-default disabled selected></option>
+        <option value="picanha_soja">Picanha de Soja</option>
+        <option value="cupim">Cupim</option>
+        <option value="coracao">Coração</option>
+    </select>
+    <br><br>
+    <button onclick="verificar_alimentacao()">Sou vegano?</button>
+</body>
+</html>
+
+<script>
+    function verificar_alimentacao(){
+        var combo_cafe_manha = document.getElementById("cb_cafe_manha")
+        var combo_almoco = document.getElementById("cb_almoco")
+        var combo_janta = document.getElementById("cb_janta")
+
+        if(combo_cafe_manha.selectedIndex == 2 && combo_almoco.selectedIndex == 2 && combo_janta.selectedIndex == 1)
+        {
+            alert("Sim, você é vegano!")
+        }
+        else{
+            alert("Não, você não é vegano")
+        }
+    }
+</script>

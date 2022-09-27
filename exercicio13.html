@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 12</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite a nota da avaliação:</p>
+    <input type="number" id="input_nota">
+    <br><br>
+    <button onclick="avaliar()">Avaliar</button>
+    <br><br>
+   <span id="span_estrela"></span>
+</body>
+</html>
+<script>
+    function avaliar(){
+        //https://icones.pro/wp-content/uploads/2021/02/icone-etoile-grise.png
+        //https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Featured_article_star_tt.svg/1024px-Featured_article_star_tt.svg.png
+        var nota = Number(input_nota.value)
+
+        if(nota<0 || nota>5)
+        {
+            alert("Nota inválida. Digite de 0 a 5.")
+        }
+        else if(nota<0.5)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=0.5 && nota<1)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_metade.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=1 && nota<1.5)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=1.5 && nota<2)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_metade.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=2 && nota<2.5)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=2.5 && nota<3)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_metade.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=3 && nota<3.5)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=3.5 && nota<4)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_metade.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=4 && nota<4.5)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_cinza.png" width="50px">
+            `
+        }
+        else if(nota>=4.5 && nota<5)
+        {
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_metade.png" width="50px">
+            `
+        }
+        else{
+            span_estrela.innerHTML = 
+            `
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            <img src="estrela_amarela.png" width="50px">
+            `
+        }
+    }
+</script>

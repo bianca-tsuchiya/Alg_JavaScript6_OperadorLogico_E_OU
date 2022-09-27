@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 2</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite sua renda:</p>
+    <input type="number" id="input_renda">
+    <br><br>
+    <p>Digite a renda total familiar:</p>
+    <input type="number" id="input_renda_familiar">
+    <br><br>
+    <button onclick="verificar_ajuda()">Verificar Ajuda</button>
+</body>
+</html>
+<script>
+    function verificar_ajuda(){
+        var renda = Number(input_renda.value)
+        var renda_familiar = Number(input_renda_familiar.value)
+
+        if(renda<=1050 && renda_familiar<=2100)
+        {
+            alert("Você terá direito!")
+        }
+        else
+        {
+            alert("Você NÃO terá direito")
+        }
+    }
+</script>

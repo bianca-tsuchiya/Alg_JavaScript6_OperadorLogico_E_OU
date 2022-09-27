@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 3</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite a temperatura do ambiente:</p>
+    <input type="number" id="input_temperatura_ambiente">
+    <br><br>
+    <button onclick="medir_conforto()">Medir conforto</button>
+</body>
+</html>
+<script>
+    function medir_conforto(){
+        var temperatura_ambiente = Number(input_temperatura_ambiente.value)
+
+        if(temperatura_ambiente>=22 && temperatura_ambiente<=23)
+        {
+            alert("Temperatura confortável")
+        }
+        else{
+            alert("Temperatura não está confortável")
+        }
+    }
+</script>

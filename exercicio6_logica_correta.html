@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 6</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    Escolha uma das formas de pagamento, abaixo:
+    <select name="formas_pagamento" id="cb_pagamento">
+        <option value="a_vista">Dinheiro</option>
+        <option value="a_vista">Cartão de Débito</option>
+        <option value="parcelado">Cartão de Crédito</option>
+        <option value="parcelado">Boleto</option>
+    </select>
+    <br><br>
+    <button onclick="analisar_compra()">Analisar Compra</button>
+</body>
+</html>
+
+<script>
+    function analisar_compra(){
+
+        if(cb_pagamento.value == "a_vista")
+        {
+            alert("Você terá que pagar a vista")
+        }
+        else{
+            alert("Pagamento poderá ser parcelado")
+        }
+    }
+</script>

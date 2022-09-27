@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 9</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Selecione o tipo de arroz usado:</p>
+    <select name="combo_arroz" id="cb_arroz">
+        <option value="integral">Integral</option>
+        <option value="branco">Branco</option>
+    </select>
+    <br><br>
+    <p>Digite o tempo de cozimento:</p>
+    <input type="number" id="input_tempo_cozimento"> minutos
+    <br><br>
+    <p>Digite a quantidade de sal usada:</p>
+    <input type="number" id="input_qtd_sal"> gramas
+    <br><br>
+    <button onclick="avaliar_arroz()">Avaliar arroz</button>
+    <br><br>
+    <b><div id="div_resultado"></div></b>
+    <div id="div_imagem"></div>
+</body>
+</html>
+<script>
+    function exibir_imagem(){
+        if(cb_arroz.value == "integral"){
+            div_imagem.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/7e/2022/05/18/arroz-integral-1652905182670_v2_900x506.jpg" alt="arroz integral" width="400px">`
+        }
+        else if(cb_arroz.value == "branco"){
+            div_imagem.innerHTML = `<img src="https://i0.wp.com/xtudoreceitas.com/wp-content/uploads/Arroz-Branco.jpg?fit=650%2C400&ssl=1&resize=1280%2C720" alt="arroz branco" width="400px">`
+        }
+    }
+
+    function avaliar_arroz(){
+
+        var tempo_cozimento = Number(input_tempo_cozimento.value)
+        var qtd_sal = Number(input_qtd_sal.value)
+
+        if(cb_arroz.value == "branco" && tempo_cozimento == 10 && qtd_sal<=10 || cb_arroz.value == "integral" && tempo_cozimento == 20 && qtd_sal<=15)
+        {
+            div_resultado.innerHTML = "Arroz Perfeito"
+            exibir_imagem()
+        }
+        else{
+            div_resultado.innerHTML = "Seu arroz não está perfeito"
+            div_imagem.innerHTML = `<img src="https://rd1.com.br/wp-content/uploads/2021/02/20210211-rd1-pesadelo-na-cozinha-erick-jacquin.png" alt="Jacquin bravo" width="400px">`
+        }
+    }
+</script>

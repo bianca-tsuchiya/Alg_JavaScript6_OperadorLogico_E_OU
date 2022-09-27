@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 8</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite o nome da empresa:</p>
+    <input id="input_nome_empresa">
+    <br><br>
+    <p>Digite o valor da bolsa da empresa:</p>
+    <input type="number" id="input_bolsa_empresa">
+    <br><br>
+    <p>Digite o valor do VR da empresa:</p>
+    <input type="number" id="input_VR">
+    <br><br>
+    <p>Digite o tempo de deslocamento entre a empresa e a SPTECH:</p>
+    <input type="number" id="input_deslocamento"> minutos
+    <br><br><br>
+    <button onclick="verificar_preferencia()">É preferida?</button>
+    <br><br>
+    <div id="div_resultado_preferencia"></div>
+</body>
+</html>
+<script>
+    function verificar_preferencia(){
+        var bolsa_empresa = Number(input_bolsa_empresa.value)
+        var vr_empresa = Number(input_VR.value)
+        var tempo_deslocamento = Number(input_deslocamento.value) 
+
+        if(bolsa_empresa>=1800 || vr_empresa>=20 || tempo_deslocamento<=30){
+            div_resultado_preferencia.innerHTML = `A empresa ${input_nome_empresa.value} é uma de suas preferências`
+        }
+        else
+        {
+            div_resultado_preferencia.innerHTML = `A empresa ${input_nome_empresa.value} está fora da sua lista`
+        }
+        
+    }
+
+</script>

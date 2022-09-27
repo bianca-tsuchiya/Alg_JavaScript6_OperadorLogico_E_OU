@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 5</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite o valor de sua renda individual:</p>
+    <input type="number" id="input_renda_individual">
+    <br><br>
+    <p>Digite o valor da renda familiar:</p>
+    <input type="number" id="input_renda_familia">
+    <br><br>
+    <button onclick="verificar_beneficio()">Terei o benefício?</button>
+</body>
+</html>
+<script>
+    function verificar_beneficio(){
+        var valor_renda_indiv = Number(input_renda_individual.value)
+        var valor_renda_familia = Number(input_renda_familia.value)
+
+        if(valor_renda_indiv<=2000 || valor_renda_familia<=3000)
+        {
+            alert("Você terá direito ao auxílio")
+        }
+        else
+        {
+            alert("Sem direito ao auxílio")
+        }
+    }
+</script>

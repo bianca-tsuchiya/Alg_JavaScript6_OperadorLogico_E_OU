@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 11</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Selecione a marca da TV:</p>
+    <select name="combo_marcas_tv" id="cb_marcas_tv">
+        <option value="samsung">Samsung</option>
+        <option value="lg">LG</option>
+        <option value="mondial">Mondial</option>
+        <option value="britania">Britânia</option>
+    </select>
+    <br><br>
+    <p>Digite o preço da TV:</p>
+    <input type="number" id="input_preco_tv">
+    <br><br>
+    <button onclick="analisar_compra()">Analisar Compra</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function analisar_compra(){
+        var preco_tv = Number(input_preco_tv.value)
+
+        if(preco_tv<800)
+        {
+            div_resultado.innerHTML = "<b>TV fora da faixa de preço</b> <br>" + "Preço baixo demais!"
+        }
+        else if(preco_tv>2000)
+        {
+            div_resultado.innerHTML = "<b>TV fora da faixa de preço</b> <br>" + "TV cara demais, infelizmente"
+        }
+        else if((cb_marcas_tv.value == "mondial" || cb_marcas_tv.value == "britania") && preco_tv>=800 && preco_tv<=2000)
+        {
+            div_resultado.innerHTML = "Na faixa de preço, porém marca não confiável"
+        }
+        else {
+            div_resultado.innerHTML = "Essa TV pode entrar na sua lista!"
+        }
+    }
+</script>

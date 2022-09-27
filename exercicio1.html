@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 1</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite sua idade:</p>
+    <input type="number" id="input_idade">
+    <br><br>
+    <p>Digite seu peso:</p>
+    <input type="number" id="input_peso">
+    <br><br>
+    <button onclick="verificar_brinquedo()">Pode brincar?</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function verificar_brinquedo(){
+        var idade = Number(input_idade.value)
+        var peso = Number(input_peso.value)
+
+        if(idade>15 && peso<=100)
+        {
+            div_resultado.innerHTML = `Você poderá brincar &#128578;`
+        }
+        else{
+            div_resultado.innerHTML = `Você não poderá brincar &#128577;`
+        }
+    }
+</script>

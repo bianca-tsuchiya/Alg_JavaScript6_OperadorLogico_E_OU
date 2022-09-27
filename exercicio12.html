@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Operador lógico E/OU</h1>
+    <h2>Exercício 12</h2>
+    <h6>Bianca Namie Hara Tsuchiya - RA: 01222110 <br> Data: 19/09/2022</h6>
+    <br>
+    <p>Digite a nota do aluno:</p>
+    <input type="number" id="input_nota">
+    <br><br>
+    <p>Digite a frequência do aluno:</p>
+    <input type="number" id="input_freq">
+    <br><br>
+    <button onclick="analisar_aluno()">Analisar Aluno</button>
+    <br><br>
+    <div id="div_resultado_nota"></div>
+    <div id="div_resultado_freq"></div>
+</body>
+</html>
+<script>
+    function analisar_aluno(){
+        var nota = Number(input_nota.value)
+        var freq = Number(input_freq.value)
+
+        if(nota<0 || nota>10)
+        {
+            alert("Onde já se viu nota<0 ou >10?!")
+            div_resultado_nota.innerHTML = ""
+            div_resultado_freq.innerHTML = ""
+        }
+        else if(nota>=0 && nota<6)
+        {
+            div_resultado_nota.innerHTML = "Aluno ficou abaixo da média"
+        }
+        else if(nota>=6 && nota<=8)
+        {
+            div_resultado_nota.innerHTML = "Aluno ficou na média"
+        }
+        else
+        {
+            div_resultado_nota.innerHTML = "Aluno acima da média"
+        }
+
+        if(freq<0 || freq>100){
+            alert("Onde já se viu frequência<0 ou >100?!")
+            div_resultado_nota.innerHTML = ""
+            div_resultado_freq.innerHTML = ""
+        }
+        else if(freq>75)
+        {
+            div_resultado_freq.innerHTML = "Aluno aprovado por frequência"
+        }
+        else{
+            div_resultado_freq.innerHTML = "Aluno reprovado por frequência"
+        }
+    }
+</script>
